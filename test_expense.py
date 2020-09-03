@@ -12,6 +12,10 @@ class ExpenseTest(unittest.TestCase):
         with self.assertRaises(TypeError): 
             exp3 = Expense()
 
+        # If the cost is negative
+        with self.assertRaises(ValueError):
+            exp3 = Expense("Bag", -2)
+
     def test_name(self):
         """ Testing name attribute functionality """
 
@@ -27,10 +31,6 @@ class ExpenseTest(unittest.TestCase):
 
     def test_cost(self):
         """ Testing cost attribute functionality """
-
-        # If the cost is negative
-        with self.assertRaises(ValueError):
-            exp3 = Expense("Bag", -2)
 
         # Testing getter and setter
         with self.assertRaises(ValueError):
