@@ -7,12 +7,13 @@ class ExpenseTest(unittest.TestCase):
         self.exp1 = Expense("Eggs", 2.5)
         self.exp2 = Expense("Milk", 3.5)
 
-    def test_name(self):
-        """ Testing name attribute functionality """
-
+    def test_init(self):
         # If no parameters are provided
         with self.assertRaises(TypeError): 
             exp3 = Expense()
+
+    def test_name(self):
+        """ Testing name attribute functionality """
 
         # Testing getter and setter
         self.assertEqual(self.exp1.name, "Eggs")
