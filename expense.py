@@ -3,8 +3,8 @@ class Expense():
     """ Class expense """
     def __init__(self, name, cost):
         """ Init function """
-        self.name = name
-        self.cost = cost
+        self._name = name
+        self._cost = cost
 
     def __str__(self):
         """ Printing functionality """
@@ -13,20 +13,20 @@ class Expense():
     @property
     def name(self):
         """ Name getter """
-        return self.name
+        return self._name
 
     @name.setter
     def name(self, name):
-        self.name = name
+        self._name = name
 
     @property
     def cost(self):
         """ Cost getter """
-        return self.cost
+        return self._cost
 
     @cost.setter
     def cost(self, cost):
         if cost < 0: # Cost cannot be negative
             raise ValueError("Cost cannot be negative")
 
-        self.cost = cost
+        self._cost = cost
