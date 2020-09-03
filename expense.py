@@ -5,3 +5,6 @@ class Expense():
         self.name = name
         self.cost = cost
         self.type = _type
+
+    def __str__(self):
+        return f"{self.name};{self.cost};{self.type}"
