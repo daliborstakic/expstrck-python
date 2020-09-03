@@ -3,10 +3,10 @@ class Expense():
     """ Class expense """
     def __init__(self, name, cost):
         """ Init function """
-        self._name = name
-
         if cost < 0: # Cost cannot be negative
             raise ValueError("Cost cannot be negative")
+
+        self._name = name
         self._cost = cost
 
     def __str__(self):
